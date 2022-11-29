@@ -35,8 +35,9 @@ public class LinkedList<E> {
         }
         head=newNode;
         this.size++;
-
     }
+
+
 
     public E peek(){
         if(size!=0){
@@ -62,10 +63,66 @@ public class LinkedList<E> {
         this.size++;
     }
 
+    public  boolean isOutOfRange(int index){
+        return (index<0 || index >=size());
+    }
+
+    public void remove(int index)  {
+        if(isOutOfRange(index)){
+            throw new IndexOutOfBoundsException();
+        }
+        if(index==0){
+            head=head.next;
+        }
+        else
+        {
+            SingleNode<E> prevNode = getNodeByIndex(index-1);
+            if(index==size()-1){
+                prevNode.next=null;
+            }
+            else{
+
+                SingleNode<E> currentNode=prevNode.next;
+                prevNode.next=currentNode.next;
+                //prevNode.next= prevNode.next.next;
+            }
+        }
+
+    }
+    // home work 29 11 22
+//    public boolean contains(E item){
+//
+//    }
+//
+//
+//    public boolean removeByValue(E item){
+//
+//    }
+//
+//    public E pop(){
+//
+//    }
+
+    public E[] toArray(){
+
+        E[] result = (E[]) new Object[size];
+        SingleNode<E> tempNode = this.head;
+        for(int i=0 ; i<size; i++){
+            E dataAtCurrentNode = tempNode.data;
+            result[i]=dataAtCurrentNode;
+            tempNode= tempNode.next;
+        }
+        return result;
+    }
+
     public E getValueByIndex(int index){
 
         SingleNode<E> node = getNodeByIndex(index);
-        return  node.data;
+        if(node!=null){
+            return  node.data;
+        }
+        return null;
+
     }
 
 
@@ -76,12 +133,15 @@ public class LinkedList<E> {
             return null;
         }
         else{
-            SingleNode temp =head;
-            while (temp.next!=null && index!=counter){
+            SingleNode<E> temp =head;
+            while (temp!=null ){
+                if(counter==index){
+                    return  temp;
+                }
                 temp=temp.next;
                 counter++;
             }
-            return  temp;
+            return  null;
         }
     }
 
