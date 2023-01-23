@@ -11,7 +11,7 @@ public class Node<T> {
 
     public Node getNext(){return next;}
     public void setNext(Node<T> node){next=node;}
-    public T getData(){return data}
+    public T getData(){return data;}
     public void setData(T data){this.data=data;}
 
 
