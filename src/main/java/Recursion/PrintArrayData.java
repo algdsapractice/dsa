@@ -10,7 +10,6 @@ public class PrintArrayData {
             print(a, size-1);
             System.out.println(a [size]);
 
-
         }
 
         public static void main(String[] args) {

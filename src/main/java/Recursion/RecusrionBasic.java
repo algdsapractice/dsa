@@ -18,6 +18,12 @@ package Recursion;
 // print(0) -> 0 -> print(1)
 public class RecusrionBasic {
 
+
+
+
+    // print(0)  // print(1)  // print(2) // print(3)
+
+
     public static void main(String[] args) {
         print(1);
     }
@@ -25,7 +31,7 @@ public class RecusrionBasic {
 
     private static void print(int data) {
 
-        if(data ==6){
+        if(data ==3){
             return;
         }
         // Head Recursion

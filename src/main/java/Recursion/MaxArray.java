@@ -4,6 +4,12 @@ public class MaxArray {
     // 112,69,22,98,23,45 -> max(int arr[], n) -> 98
     // 12,69,22,98,23,45
 
+    // 12 -> 98
+
+
+    // if( n > (n+1) ) {
+    // return n
+
     // faith -> max(arr,n+1) -> max
 
     // -> Solution -> FE
