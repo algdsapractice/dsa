@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.array;
 
 
 // 98
@@ -28,15 +28,6 @@ package Recursion;
 // if( arr[0] == dataa)
 //    0
 //   index
-
-
-
-
-
-
-
-
-
 
 
 public class FirstIndexOfAray {

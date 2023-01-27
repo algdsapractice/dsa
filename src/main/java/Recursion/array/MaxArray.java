@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.array;
 
 public class MaxArray {
     // 112,69,22,98,23,45 -> max(int arr[], n) -> 98
