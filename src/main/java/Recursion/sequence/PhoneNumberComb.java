@@ -33,12 +33,12 @@ public class PhoneNumberComb {
             resultString.add("");
             return resultString;
         }
-        char firstChar = digits.charAt(0); //2
+        Character firstChar = digits.charAt(0); //2
         String remainingString = digits.substring(1); // 36
 
         List<String> combinations = letterCombinations(remainingString);
 
-         String lettersOnPhone = letters[firstChar];
+         String lettersOnPhone = letters[Integer.parseInt(firstChar.toString())];
 
          for(int i=0 ; i<lettersOnPhone.length();i++){
 
@@ -49,6 +49,7 @@ public class PhoneNumberComb {
              }
 
          }
+        System.out.println(resultString);
         return resultString;
 
     }
