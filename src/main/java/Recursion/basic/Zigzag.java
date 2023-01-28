@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.basic;
 
 public class Zigzag {
 

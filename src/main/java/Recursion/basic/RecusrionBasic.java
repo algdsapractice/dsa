@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.basic;
 
 // print 1 to 5 ->
 // you can not use the loop

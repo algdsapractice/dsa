@@ -24,6 +24,7 @@ public class PhoneNumberComb {
 
 
     static String[] letters = {" ", "", "abc", "def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+
     public static List<String> letterCombinations(String digits) {
         //236
         List<String> resultString = new ArrayList<>();
@@ -38,11 +39,11 @@ public class PhoneNumberComb {
 
         List<String> combinations = letterCombinations(remainingString);
 
-         String lettersOnPhone = letters[Integer.parseInt(firstChar.toString())];
+         String lettersOnPhone = letters[Integer.parseInt(firstChar.toString())]; //abc
 
          for(int i=0 ; i<lettersOnPhone.length();i++){
 
-             char firstCharOnMobile = lettersOnPhone.charAt(i);
+             char firstCharOnMobile = lettersOnPhone.charAt(i); //a
 
              for (String s: combinations) {
                  resultString.add(firstCharOnMobile+s);

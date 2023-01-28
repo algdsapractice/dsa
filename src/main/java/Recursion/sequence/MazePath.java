@@ -24,7 +24,7 @@ public class MazePath {
             return  allPossiblePaths;
         }
 
-        if(sourceColumn<destinationColumn){
+        if(sourceColumn<destinationColumn ){
             horizontalPaths=getAllPossibleMazePaths(sourceRow,sourceColumn+1,destinationRow,destinationColumn);// horizontal movement
         }
         if(sourceRow<destinationRow){

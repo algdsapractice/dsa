@@ -1,6 +1,8 @@
 package Recursion.sequence;
 
-// a,b,c
+//  ""
+// 2^0 = 1
+// a,b,c -> n = 2^n
 
 // "",c , b, a ,bc , ac, ab ,abc
 
@@ -13,7 +15,7 @@ package Recursion.sequence;
 // a - c
 // ab -
 // a b c
-
+// Faith
 // bc  -> [--, b , c, ,bc ]
 
 // abc -> a , " "
@@ -39,13 +41,9 @@ public class PrintTheSubsequence {
             result.add("");
             return result;
         }
-
         char firstChar = data.charAt(0);// a
         String remainingString = data.substring(1); // bc
-
         ArrayList<String>  combination = printSubSequence(remainingString);
-
-
         for (String s: combination) {
             result.add("" +s);
             result.add(firstChar +s);
