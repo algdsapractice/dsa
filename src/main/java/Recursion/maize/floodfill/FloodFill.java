@@ -1,4 +1,4 @@
-package Recursion.floodfill;
+package Recursion.maize.floodfill;
 
 import java.util.Arrays;
 

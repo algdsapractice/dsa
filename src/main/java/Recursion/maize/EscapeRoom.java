@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.maize;
 
 //public class Ethos_RCBGT /*
 //Problem Statement
@@ -108,4 +108,34 @@ package Recursion;
 //
 //    }
 //}{
+//}
+
+import org.omg.CORBA.WStringSeqHelper;
+//
+//public class EscapeRoom {
+//
+//    public static void main(String[] args) {
+//             char[][] room = {
+//                                 {'+','+','.','+'},
+//                                 {'.','.','.','+'},
+//                                 {'+','+','+','.'}
+//                             };
+//             int sr=1 , sc=2;
+//             int time = escape(room,sr,sc);
+//             System.out.println(time);
+//
+//    }
+//
+//
+//
+//    public static int escape(char[][] room, int sr,int sc) {
+//
+//        if(sr<0||sc<0||sc>room[0].length||sr>room.length||room[sr][sc] != '+'){
+//            return 0;
+//        }
+//
+//        int t= escape(room,sr-1,sc) +1;
+//    }
+
+
 //}

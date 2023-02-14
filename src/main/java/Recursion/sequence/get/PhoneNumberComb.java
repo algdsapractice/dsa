@@ -1,4 +1,4 @@
-package Recursion.sequence;
+package Recursion.sequence.get;
 
 // https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 

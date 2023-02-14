@@ -1,4 +1,4 @@
-package Recursion.sequence;
+package Recursion.sequence.get;
 
 //  ""
 // 2^0 = 1

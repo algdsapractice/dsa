@@ -1,4 +1,4 @@
-package Recursion.sequence;
+package Recursion.sequence.get;
 
 import java.util.ArrayList;
 
