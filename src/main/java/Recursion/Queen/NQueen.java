@@ -3,7 +3,7 @@ package Recursion.Queen;
 public class NQueen {
 
     public static void main(String[] args) {
-        int [][] chess = new int[2][2];
+        int [][] chess = new int[4][4];
         int row = 0;
         String ans="";
         findPosition(chess,ans,row);
@@ -29,23 +29,23 @@ public class NQueen {
 
     private static boolean isValidMove(int[][] chess, int row, int col) {
         // Right diagonal movement
-        for(int i = row-1 , j=col+1; i>=0 ; i-- ,j++ ){
-            if(chess[row][col]==1){
+        for(int i = row-1 , j=col+1; i>=0 && j<chess.length; i-- ,j++ ){
+            if(chess[i][j]==1){
                 return false;
             }
         }
 
         // Left diagonal movement
-        for(int i = row-1 , j=col-1; i>=0 ; i-- ,j-- ){
-            if(chess[row][col]==1){
+        for(int i = row-1 , j=col-1; i>=0 && j>=0; i-- ,j-- ){
+            if(chess[i][j]==1){
                 return false;
             }
         }
 
 
         // Vertical movement
-        for(int i = row-1 ; i>=0 ; i--  ){
-            if(chess[row][col]==1){
+        for(int i = row-1 , j=col; i>=0 ; i--  ){
+            if(chess[i][j]==1){
                 return false;
             }
         }
