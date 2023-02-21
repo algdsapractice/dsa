@@ -1,11 +1,11 @@
-package Recursion.combinations;
+package Recursion.subset;
 
 public class FindSubsetSum {
 
     public static void main(String[] args) {
 
-        int[] arr = {10,20,30};
-        int targetSum = 30;
+        int[] arr = {5,2,3,5};
+        int targetSum = 10;
         getTheTargetSum(arr,targetSum);
         //System.out.println(pairs);
     }
@@ -26,8 +26,6 @@ public class FindSubsetSum {
             return ;
 
         }
-
-
 
        getTheTargetSum(arr,idx+1,set+arr[idx]+ ", ",sum+arr[idx],targetSum);
         getTheTargetSum(arr,idx+1,set,sum,targetSum);

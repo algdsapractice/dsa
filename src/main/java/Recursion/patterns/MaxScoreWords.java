@@ -1,9 +1,11 @@
 package Recursion.patterns;
 
+import java.util.Arrays;
+
 public class MaxScoreWords {
     public static void main(String[] args) {
         String [] words = {"dog","cat","dad","good"};
-        char[] letters = {'a','b','c','d','d','d','g','o','o'};
+        char[] letters = {'a','a','c','d','d','d','g','o','o'};
         int [] score= {1,0,9,5,0,0,3,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0};
         int index=0;
         // converting characters to frequency
@@ -11,11 +13,9 @@ public class MaxScoreWords {
         int [] frequency = new int[score.length];
         for(char ch : letters){
             frequency[ch - 'a']++;
-//            System.out.println("position");
-//            System.out.println(ch - 'a');
-//            System.out.println("fr");
-//            System.out.println(frequency[ch - 'a']);
         }
+
+        System.out.println(Arrays.toString(frequency));
         //System.out.println(freq.length);
 
         int result = findMaxWord(words,frequency,score,index);
@@ -44,11 +44,12 @@ public class MaxScoreWords {
         for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
             int frequencyIndex= ch-'a';
-            if(frequency[frequencyIndex]<0){
+            if(frequency[frequencyIndex]==0){
                 toBeIncluded=false;
             }
-            frequency[frequencyIndex]--;
-            wordScore += frequency[frequencyIndex];
+
+            wordScore += score[frequencyIndex];
+            frequency[frequencyIndex] = frequency[frequencyIndex]-1;
         }
 
         if(toBeIncluded){
