@@ -1,4 +1,4 @@
-package Recursion.subset;
+package Recursion.backtracking.subset;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -12,11 +12,11 @@ public class NonDecreasingSubSeq {
     public static void main(String[] args) {
 
         int[] nums = {4,6,7,7};
-        List<List<Integer>> result = findSubSequence(nums);
+        List<List<Integer>> result = getSubSequence(nums);
         System.out.println(result);
     }
 
-    private static List<List<Integer>> findSubSequence(int[] nums) {
+    private static List<List<Integer>> getSubSequence(int[] nums) {
         Set<List<Integer>> result = new HashSet<List<Integer>>();
         List<Integer> bag = new ArrayList<>();
         int index=0;
@@ -34,8 +34,9 @@ public class NonDecreasingSubSeq {
             }
             return ;
         }
+        findSubSequence(nums,index+1,bag,result);
 
-        if(bag.isEmpty() || bag.get(index-1)<nums[index]){
+        if(bag.isEmpty() || bag.get(bag.size()-1)<=nums[index]){
 
             bag.add(nums[index]);
             findSubSequence(nums,index+1,bag,result);
@@ -43,7 +44,6 @@ public class NonDecreasingSubSeq {
 
         }
 
-        findSubSequence(nums,index+1,bag,result);
 
 
     }
