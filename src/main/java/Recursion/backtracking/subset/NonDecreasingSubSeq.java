@@ -36,6 +36,7 @@ public class NonDecreasingSubSeq {
         }
         findSubSequence(nums,index+1,bag,result);
 
+        //  lastIndexOfBag=bag.size()-1;
         if(bag.isEmpty() || bag.get(bag.size()-1)<=nums[index]){
 
             bag.add(nums[index]);
