@@ -34,7 +34,6 @@ public class NonDecreasingSubSeq {
             }
             return ;
         }
-        findSubSequence(nums,index+1,bag,result);
 
         //  lastIndexOfBag=bag.size()-1;
         if(bag.isEmpty() || bag.get(bag.size()-1)<=nums[index]){
@@ -44,6 +43,9 @@ public class NonDecreasingSubSeq {
             bag.remove(bag.size()-1);
 
         }
+
+        findSubSequence(nums,index+1,bag,result);
+
 
 
 
