@@ -23,7 +23,7 @@ public class ConsecutiveDifference {
             return new int[]{1,2,3,4,5,6,7,8,9};
         }
 
-        for (int i=1; i<n; i++) {
+        for (int i=1; i<10; i++) {
             dfs(n, k,i,no_of_digit,i,result);
         }
 
@@ -39,10 +39,10 @@ public class ConsecutiveDifference {
                      int prev, ArrayList<Integer> result) {
 
 
-    if(n==no_of_digit-1){
-        result.add(current);
-        return;
-    }
+        if(n-1==no_of_digit){
+            result.add(current);
+            return;
+        }
 
         int next = prev+k;
         if(next<10) {
@@ -51,7 +51,7 @@ public class ConsecutiveDifference {
 
 
         next = prev-k;
-        if(k!=0 && next>=0) {
+        if(next>=0) {
             dfs(n, k, (current*10) + next, no_of_digit + 1, next, result);
         }
 
