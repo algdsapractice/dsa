@@ -28,9 +28,9 @@ public class  BusRoutes {
 
             for (int j=0 ; j<routes[busNumber].length ; j++){
                 int busStop = routes[busNumber][j];
-                ArrayList<Integer>  busNoList = map.getOrDefault(busNumber,new ArrayList<Integer>());
-                busNoList.add(busNumber);
-                map.put(busStop,busNoList);
+                ArrayList<Integer>  busStopList = map.getOrDefault(busNumber,new ArrayList<Integer>());
+                busStopList.add(busNumber);
+                map.put(busStop,busStopList);
 
             }
         }
@@ -39,7 +39,7 @@ public class  BusRoutes {
         //2.  BFS making a queue
         HashSet<Integer> visitedBusStop = new HashSet<Integer>();
 
-        HashSet<Integer> visitedBus = new HashSet<Integer>();
+        HashSet<Integer> visitedBusNumber = new HashSet<Integer>();
 
         Queue<Integer> queue = new LinkedList<>();
         queue.add(source);
