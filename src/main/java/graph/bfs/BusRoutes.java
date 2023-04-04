@@ -53,6 +53,10 @@ public class  BusRoutes {
                     if(busStop==target){
                         return level;
                     }
+                    for(int j=0 ; j<routes[i].length;j++){
+
+
+                    }
 
             }
 
