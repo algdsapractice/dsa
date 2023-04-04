@@ -19,7 +19,7 @@ public class CheapestFilght {
 //                }
 //            });
 
-            PriorityQueue<int[]> q=new PriorityQueue<>((ar1,ar2)-> ar1[0]-ar2[0]);
+            PriorityQueue<int[]> q=new PriorityQueue<>((ar1,ar2)-> ar1[1]-ar2[1]);
             q.offer(new int[]{src,0 ,K});
             while(!q.isEmpty())
             {
