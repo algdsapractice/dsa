@@ -1,4 +1,4 @@
-package komprise;
+package company.komprise;
 
 public class Demo {
     // array  4 1 3 9 2 10
@@ -20,8 +20,6 @@ public class Demo {
                 sum+=internalSum;
 
             }
-
-
             int timeInSecs = pos+1+arr[pos]*length-1-sum;
 
             return timeInSecs;

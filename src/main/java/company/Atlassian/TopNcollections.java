@@ -1,6 +1,4 @@
-package Atlassian;
-
-import java.util.*;
+package company.Atlassian;
 
 //cf 1-> 90
 //cf2 -> 60

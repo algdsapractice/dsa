@@ -1,4 +1,4 @@
-package karat;
+package company.karat;
 
 import java.util.Arrays;
 import java.util.HashMap;

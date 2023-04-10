@@ -47,7 +47,7 @@ public class Stack<E> {
 
         return data;
     }
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return this.size==0;
     }
 

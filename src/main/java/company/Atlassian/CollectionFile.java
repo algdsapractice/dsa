@@ -1,4 +1,4 @@
-package Atlassian;
+package company.Atlassian;
 
 public class CollectionFile {
 
