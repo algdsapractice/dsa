@@ -14,6 +14,8 @@ public class DisjointSet {
         Arrays.fill(rank,0);
         // setting the parent to the same number initially
         Arrays.setAll(parent, i-> i+1-1);
+
+
     }
 
     public int findRootParent(int x){
