@@ -1,4 +1,4 @@
-package linkedlist;
+package dataStructure.LinkedList;
 
 import sun.awt.image.ImageWatched;
 import util.SingleNode;

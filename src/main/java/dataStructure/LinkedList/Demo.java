@@ -1,8 +1,6 @@
-package linkedlist;
+package dataStructure.LinkedList;
 
-import util.SingleNode;
-
-import java.io.File;
+import dataStructure.LinkedList.LinkedList;
 
 public class Demo {
 
