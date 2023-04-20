@@ -13,24 +13,26 @@ public class FindCandidate {
             voteCount.put(candidate, voteCount.getOrDefault(candidate, 0) + ballots.get(ballot));
         }
 
+       String candidate =
+               voteCount.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).limit(1)
+                       .map(m->m.getKey()).collect(Collectors.toList()).get(0);
 
 
-//        List<String> candidate = voteCount.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).limit(1).
+
+//       String popularWinner = null;
+//        int maxVotes = -1;
 //
-//        String popularWinner = null;
-        int maxVotes = -1;
-
-        for (String candidate : voteCount.keySet()) {
-            int votes = voteCount.get(candidate);
-
-            if (votes > maxVotes) {
-                maxVotes = votes;
+//        for (String candidate : voteCount.keySet()) {
+//            int votes = voteCount.get(candidate);
+//
+//            if (votes > maxVotes) {
+//                maxVotes = votes;
 //                popularWinner = candidate;
-            }
-        }
+//            }
+//        }
+//        return popularWinner;
 
-        //return popularWinner;
-        return null;
+        return candidate;
     }
 
     private static String findRankedWinner(Map<List<String>, Integer> ballots) {
@@ -97,7 +99,7 @@ public class FindCandidate {
         ballots.put(Arrays.asList("A", "B", "C"), 4);
         ballots.put(Arrays.asList("B", "C", "A"), 3);
         ballots.put(Arrays.asList("C", "B", "A"), 2);
-//        ballots.put(Arrays.asList("B"), 2);
+        ballots.put(Arrays.asList("B"), 2);
 
 
         String popularWinner = findPopularCandidate(ballots);
