@@ -18,6 +18,7 @@ public class Stack<E> {
         this.top=null;
         this.size=0;
     }
+
     public void push(E data){
         SingleNode<E> newNode =new SingleNode<>(data);
         if (!isEmpty()) {
@@ -26,6 +27,7 @@ public class Stack<E> {
         this.top=newNode;
         this.size++;
     }
+
 
     public E peek(){
         if(isEmpty()){
@@ -38,6 +40,8 @@ public class Stack<E> {
         return this.size;
     }
     public E pop(){
+
+        //
         if(isEmpty()){
             throw new EmptyStackException();
         }
