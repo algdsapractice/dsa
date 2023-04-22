@@ -1,7 +1,5 @@
 package graph.dsu;
 
-import java.util.Arrays;
-
 public class DisjointSet {
 
     int[] rank;
@@ -10,10 +8,16 @@ public class DisjointSet {
     public DisjointSet(int n){
         rank = new int[n+1];
         parent = new int[n+1];
-        // setting the rank initially to zero
-        Arrays.fill(rank,0);
-        // setting the parent to the same number initially
-        Arrays.setAll(parent, i-> i+1-1);
+        // first approach
+        for(int i = 0; i <=n; i++)
+        {
+            rank[i] =1;
+            parent[i] =i;
+        }
+//        // setting the rank initially to zero
+//        Arrays.fill(rank,0);
+//        // setting the parent to the same number initially
+//        Arrays.setAll(parent, i-> i+1-1);
 
 
     }
@@ -44,8 +48,8 @@ public class DisjointSet {
         else{
             // if ranks are equal than any  can be parent
             // let u be the parent of v and increment the rank of u by 1
-            parent[y]=x;
-            rank[px]=rx+1;
+            parent[y]=px;
+            rank[px]+=1;
         }
 
 
@@ -59,15 +63,15 @@ public class DisjointSet {
         ds.unionByRank(4, 5);
         ds.unionByRank(6, 7);
         ds.unionByRank(5, 6);
-
         // if 3 and 7 same or not
-        if (ds.findRootParent(3) == ds.findRootParent(7)) {
-            System.out.println("Same");
-        } else
-            System.out.println("Not Same");
-
+        isSameParent(ds,3,7);
         ds.unionByRank(3, 7);
-        if (ds.findRootParent(3) == ds.findRootParent(7)) {
+        isSameParent(ds,3,7);
+
+    }
+
+    private static void isSameParent(DisjointSet ds, int x, int y) {
+        if (ds.findRootParent(x) == ds.findRootParent(y)) {
             System.out.println("Same");
         } else
             System.out.println("Not Same");
