@@ -17,8 +17,6 @@ public class FindCandidate {
                voteCount.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).limit(1)
                        .map(m->m.getKey()).collect(Collectors.toList()).get(0);
 
-
-
 //       String popularWinner = null;
 //        int maxVotes = -1;
 //
