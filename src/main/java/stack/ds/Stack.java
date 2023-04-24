@@ -1,4 +1,4 @@
-package stack;
+package stack.ds;
 //1->3->4
 //3
 import util.SingleNode;
