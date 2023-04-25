@@ -1,4 +1,4 @@
-package dp;
+package dp.knapsack;
 
 import static java.lang.Math.max;
 
@@ -14,21 +14,16 @@ public class TabKnapSack01{
 
         for(int i =0; i<=n;i++)
         {
-
-
             for(int j=0; j<=capacity ; j++)
             {
-
                 if(j==0 || i==0)
                 {
                     dp[i][j]=0;
                 }
-
                 else if(wt[i-1] <= j)
                 {
 
                     dp[i][j]=max(prices[i-1]+dp[i-1][j-wt[i-1]],dp[i-1][j]);
-
                 }
                 else
                 {

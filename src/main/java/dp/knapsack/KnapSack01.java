@@ -1,4 +1,4 @@
-package dp;
+package dp.knapsack;
 
 //-> selection/combination/choices
 //-> Optimal solution

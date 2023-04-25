@@ -1,4 +1,4 @@
-package twopointers;
+package patterns.twopointers;
 
 class CircularArrayLoop {
 
