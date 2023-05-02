@@ -63,6 +63,35 @@ public class SubsetSum {
 
     // }
 
+    // second approach
+    public static List<Integer> getSubsetSum(int[] arr, int sum, int n, List<Integer> g) {
+        // Base cases
+        if (sum == 0) {
+            return g;
+        }
+        if (n == 0 && sum != 0) {
+            return null;
+        }
+
+        // If last element is greater than sum, ignore it
+        if (arr[n-1] > sum) {
+            return getSubsetSum(arr, sum, n-1, g);
+        }
+
+        // Check if sum can be obtained by including or excluding the last element
+        List<Integer> subset = getSubsetSum(arr, sum, n-1, g);
+        if (subset != null) {
+            return subset;
+        }
+        List<Integer> newG = new ArrayList<Integer>(g);
+        newG.add(arr[n-1]);
+        subset = getSubsetSum(arr, sum-arr[n-1], n-1, newG);
+        if (subset != null) {
+            return subset;
+        }
+        return null;
+    }
+
 
     public static List<Integer> subsetSum(int[] arr,int sum, int n){
 
